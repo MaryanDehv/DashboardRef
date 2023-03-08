@@ -1,8 +1,8 @@
 import './App.css';
-import Sidebar from './components/navigation/Sidebar';
-import Topbar from './components/navigation/Topbar';
-import Home from './components/view/home/Home';
-
+import Sidebar from './Components/navigation/Sidebar';
+import Topbar from './Components/navigation/Topbar';
+import Home from './Components/view/home/main_view/Home';
+ 
 function App() {
   return (
     <div className="dashboard_container">

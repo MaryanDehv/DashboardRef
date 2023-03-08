@@ -3,7 +3,8 @@
     .home.grid-display{
         display: grid;
         grid-template-columns: [one] 60% [two] auto;
-        grid-template-rows:repeat(10 , 154px);
+        // grid-template-rows:repeat(10 , 154px);
+        grid-auto-rows: minmax(154px, auto);
         gap:10px;
 
         >div{
@@ -35,10 +36,9 @@
 
 
 
-    @media only screen and (max-width:767px){
+    @media only screen and (max-width:1024px){
         .home.grid-display{
             grid-template-columns: 1fr;
-            grid-template-rows:repeat(16 , 154px);
         }
         
         .overview{
@@ -67,7 +67,7 @@
     }
     
 
-    @media screen and (min-width:767px) {
+    @media screen and (min-width:1025px) {
         .overview{
             grid-row: 1 / 3;
         }

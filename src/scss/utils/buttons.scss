@@ -2,7 +2,6 @@ button{
     border:0;
     padding: 10px 20px;
     text-align: center;
-    font-weight: bold;
     cursor: pointer;
 
     &.blue-btn{
@@ -11,6 +10,18 @@ button{
 
     &.white-txt{
         color: $white;
+    }
+
+    &.dark{
+        border: 1px solid $lightBlack;
+    }
+
+    &.transparent{
+        background: transparent;
+    }
+
+    &.bold{
+        font-weight: bold ;
     }
 
     &.full{
