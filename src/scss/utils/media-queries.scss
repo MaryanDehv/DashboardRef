@@ -1,0 +1,15 @@
+.main_view,.top_bar{
+    width: calc(100% - 250px);
+}
+
+@media screen and (max-width:768px) {
+    .main_view,.top_bar{
+        width: calc(100% - 180px);
+    }
+}
+
+@media screen and (max-width:425px) {
+    .main_view,.top_bar{
+        width: 100%;
+    }
+}

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Ubuntu:wght@300;400&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+@import './colors.scss';
+
+// views
+@import './views/home.scss';
+
+// utils
+@import './utils/buttons.scss';
+@import './utils/media-queries.scss';
+@import './utils/new-customers.scss';
+@import './utils/filter.scss';
+
+// nav
+@import './navigation/sidebar.scss';
+@import './navigation/topbar.scss';
+
+*{
+    box-sizing: border-box;
+    font-family: "open sans" , sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    background: $black;
+    color: $white;
+    max-width: 1920px;
+}
+
+.main-heading{
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+// margins
+.mt-20{
+    margin-top: 20px;
+}
+
+.round{
+    border-radius: 9px;
+}
+
+.dashboard_container{
+    height: 100vh;
+    width: 100%;
+    background:$black;
+
+    .main_view{
+        overflow-y: scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        
+    }
+
+    &{
+        display: flex;
+    }
+
+    .main_view-inner{
+        padding: 30px;
+        position: relative;
+        top: 70px;
+    }
+}

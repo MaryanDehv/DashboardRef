@@ -1,0 +1,36 @@
+.filter{
+    border: solid 1px $lightBlack;
+    width: 130px;
+    display: flex;
+    justify-content: space-around;
+
+    >li{
+        position: relative;
+        width: 100%;
+
+        .filter-subject{
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        >ul{
+            background: $grayBlack;
+            border: solid 1px $lightBlack;
+            width: 100%;
+            position: absolute;
+            top:40px;
+            padding: 5px;
+
+            li{
+                margin: 5px 0px;
+                padding: 5px;
+            }
+
+            li:hover{
+                background: $lightBlack;
+                padding: 5px;
+                border-radius: 10px;
+            }
+        }
+    }
+}

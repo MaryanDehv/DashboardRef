@@ -1,0 +1,19 @@
+button{
+    border:0;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+
+    &.blue-btn{
+        background: $primaryBlue;
+    }
+
+    &.white-txt{
+        color: $white;
+    }
+
+    &.full{
+        width: 100%;
+    }
+}

@@ -1,0 +1,47 @@
+.customers{
+    background: red;
+
+    .welcome-container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .new-customers-list{
+        display: flex;
+        justify-content: center;
+        gap:10px;
+
+        .avatars{
+            display: flex;
+            width: 50%;
+            justify-content: space-evenly;
+            gap:10px;
+
+            .avatar{
+                div{
+                    background: pink;
+                }
+            }
+        }
+
+        .circle{
+            div{
+                width: 80px;
+                height: 80px;
+                border-radius: 100%;
+            }
+        }
+
+        .avatar , .view-all{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .view-all{
+            div{
+                background: $lightBlack;
+            }
+        }
+    }
+}

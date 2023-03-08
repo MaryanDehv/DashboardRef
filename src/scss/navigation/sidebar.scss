@@ -1,0 +1,68 @@
+.side_bar{
+    background: $grayBlack;
+    padding: 25px;
+    width: 250px;
+
+    @media only screen and (max-width:425px){
+        &{
+            display: none;
+        }
+    }
+
+    &-container{
+        height: calc(100% - 70px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &-logo-container{
+        height: 70px;
+    }
+
+    &-item{
+        padding:10px;
+        display: flex;
+        justify-content: space-between;
+        border: solid 1px transparent;
+
+        &:hover , &.active{
+            background: $lightBlack;
+            border-bottom: solid 1px $black;
+            border-top: solid 1px rgba($white, 0.1);
+        }
+    }
+
+    &-toggle-container{
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        
+        .side_bar-toggle-buttons{
+            display: flex;
+            background: $black;
+
+            >div{
+                width: 50%;
+                text-align: center;
+                margin: 5px;
+
+                &.active{
+                    background: $grayBlack;
+                }
+            }
+        }
+    }
+
+
+
+    @media screen and (max-width:768px) {
+        &{
+            width: 180px;
+        }
+
+        &-name{
+            display: none;
+        }
+    }
+}
