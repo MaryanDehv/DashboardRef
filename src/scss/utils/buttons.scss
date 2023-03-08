@@ -12,16 +12,10 @@ button{
         color: $white;
     }
 
-    &.dark{
-        border: 1px solid $lightBlack;
-    }
-
-    &.transparent{
+    &.outline-dark{
+        border: 2px solid $lightBlack;
         background: transparent;
-    }
-
-    &.bold{
-        font-weight: bold ;
+        color:$white;
     }
 
     &.full{

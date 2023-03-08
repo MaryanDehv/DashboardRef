@@ -1,16 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Ubuntu:wght@300;400&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
-@import './colors.scss';
-
-// views
-@import './views/home.scss';
 
 // utils
+@import './utils/colors.scss';
 @import './utils/buttons.scss';
 @import './utils/media-queries.scss';
-@import './utils/new-customers.scss';
 @import './utils/filter.scss';
+
+// views
+    // Home
+        // main_view
+        @import './views/home/main_view/home.scss';
+        // view_components
+            // overview_components
+            @import './views/home/view_components/overview_components/new_customers.scss';
+            @import './views/home/view_components/overview_components/analytics_tabs.scss';
+
+            //popular_products_components
+            @import './views/home/view_components/popular_products_components/product.scss';
+        
+
 
 // nav
 @import './navigation/sidebar.scss';

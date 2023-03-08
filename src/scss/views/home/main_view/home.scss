@@ -7,9 +7,13 @@
         grid-auto-rows: minmax(154px, auto);
         gap:10px;
 
-        >div{
+        .display-card{
             background: $grayBlack;
             padding: 18px;
+            
+            >div:not(:last-child){
+                margin-bottom: 30px;
+            }
         }
 
         .display-card-name{

@@ -1,0 +1,62 @@
+.analytics_tabs{
+    background: $black;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+
+    .tab{
+        width:50%;
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        place-content: center;
+        
+        &-inner{
+            display: flex;
+            gap:10px;
+        }
+        
+        &.active{
+            background: $lightBlack;
+        }
+
+        .data{
+            >div{
+                margin-bottom: 6px;
+            }
+
+            .caveat{
+                opacity: 0.5;
+                font-size: 12px;
+                display: flex;
+                gap:5px
+            }
+
+            .number{
+                font-size: 35px;
+                font-weight: bold;
+                line-height: 0.8;
+            }
+
+            .trend{
+                border-radius: 5px;
+                text-align: center;
+                font-size: 12px;
+                width: fit-content;
+                padding: 1px 8px;
+                
+                // will need to reuse these - move out form here
+                &.increase{
+                    background: rgba($primaryGreen , 0.2);
+                    color: $primaryGreen;
+                }
+
+                &.decrease{
+                    background: rgba($primaryRed , 0.2);
+                    color: $primaryRed;
+                }
+            }
+        }
+    }
+}

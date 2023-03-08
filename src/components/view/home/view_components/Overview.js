@@ -1,3 +1,5 @@
+import Newcustomers from "./overview_components/Newcustomers";
+import AnalyticsTabs from "./overview_components/AnalyticsTabs";
 
 const Overview = ({filter: Filter}) => {
     return(
@@ -9,36 +11,8 @@ const Overview = ({filter: Filter}) => {
                 </div>
                 <Filter />
             </div> 
-            <div className="analytics-buttons">
-                <div>customers</div>
-                <div> income </div>
-            </div>
-            <div className="new_customers">
-                <div className="new_customers-welcome">
-                    <p>
-                        Welcome  <span> <span className="hide"> 857 customers </span> with a personal message </span>
-                    </p>
-                    <button className="dark transparent white-txt bold round"> Send <span className="hide"> Message </span> </button>
-                </div>
-                <div className="new_customers-list">
-                    <div className="avatar circle">
-                        <div></div>
-                        <p>Gladyce</p>
-                    </div>
-                    <div className="avatar circle">
-                        <div></div>
-                        <p>Elbert</p>
-                    </div>
-                    <div className="avatar circle">
-                        <div></div>
-                        <p>Elbert</p>
-                    </div>
-                    <div className="view_all circle">
-                        <div></div>
-                        <p>View All</p>
-                    </div>
-                </div>
-            </div>
+            <AnalyticsTabs />
+            <Newcustomers />
         </div>
     );
 }
