@@ -1,3 +1,5 @@
+import Product from "./popular_products_components/Product";
+
 const PopularProducts = () => {
     return(
         <div className="popular_products round display-card"> 
@@ -15,36 +17,9 @@ const PopularProducts = () => {
                         <p> Earning</p>
                     </div>
                     <div className="display-card-products">
-                        <div className="product"> 
-                            <div className="details">
-                                <div className="image round"></div>
-                                <p className="title"> <span className="name"> Crypter - NFT </span> <span className="category"> UI Kit </span></p>
-                            </div> 
-                            <div className="data">
-                                <p className="earning"> $2,453.80 </p>
-                                <span className="product-state active"> Active </span>
-                            </div>
-                        </div>
-                        <div className="product"> 
-                            <div className="details">
-                                <div className="image round"></div>
-                                <p className="title"> <span className="name"> Crypter - NFT </span> <span className="category"> UI Kit </span></p>
-                            </div> 
-                            <div className="data">
-                                <p className="earning"> $2,453.80 </p>
-                                <span className="product-state deactive"> Deactive </span>
-                            </div>
-                        </div>
-                        <div className="product"> 
-                            <div className="details">
-                                <div className="image round"></div>
-                                <p className="title"> <span className="name"> Crypter - NFT </span> <span className="category"> UI Kit </span></p>
-                            </div> 
-                            <div className="data">
-                                <p className="earning"> $2,453.80 </p>
-                                <span className="product-state active"> Active </span>
-                            </div>
-                        </div>
+                        <Product status="deactive" product="Crypter - NFT" earning="$2,453.80" category="UI Kit"/>
+                        <Product status="active" product="Bento Matte 3D" earning="$105.60" category="Illustration 1.0"/>
+                        <Product status="deactive" product="Excellent material" earning="$648.60" category="3D chair"/>
                     </div>
                 </div>
                 <button className="full outline-dark round"> All Products </button>

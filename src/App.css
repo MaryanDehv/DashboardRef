@@ -314,6 +314,56 @@ button.full {
   color: #ff6a55;
 }
 
+.display-card-comment-list {
+  height: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.display-card .comment {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.display-card .comment .image {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+}
+.display-card .comment .container {
+  width: calc(100% - 60px);
+}
+.display-card .comment .container .details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+.display-card .comment .container .details .user {
+  display: flex;
+  gap: 5px;
+}
+.display-card .comment .container .details .user .handle, .display-card .comment .container .details .time {
+  opacity: 0.5;
+}
+.display-card .comment .container .product {
+  display: flex;
+}
+.display-card .comment .container .product:before {
+  content: "On";
+  opacity: 0.5;
+  margin-right: 5px;
+}
+.display-card .comment .container .content {
+  margin: 10px 0px;
+}
+.display-card .comment .container .actions {
+  max-width: 240px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .side_bar {
   background: #1a1d1f;
   padding: 25px;
