@@ -1,0 +1,17 @@
+.refund_req{
+    .refund_notice{
+        display: flex;
+        gap: 10px;
+
+        .icon{
+            width: 60px;
+            height: 60px;
+            background: $lightBlack;
+            border-radius: 100%;
+        }
+
+        p{
+            width: calc(100% - 60px);
+        }
+    }
+}

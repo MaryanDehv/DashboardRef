@@ -20,6 +20,8 @@ const PopularProducts = () => {
                         <Product status="deactive" product="Crypter - NFT" earning="$2,453.80" category="UI Kit"/>
                         <Product status="active" product="Bento Matte 3D" earning="$105.60" category="Illustration 1.0"/>
                         <Product status="deactive" product="Excellent material" earning="$648.60" category="3D chair"/>
+                        <Product status="deactive" product="Excellent material" earning="$648.60" category="3D chair"/>
+                        <Product status="deactive" product="Excellent material" earning="$648.60" category="3D chair"/>
                     </div>
                 </div>
                 <button className="full outline-dark round"> All Products </button>
