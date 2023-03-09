@@ -1,0 +1,77 @@
+.pro_tips{
+    .new_ideas{
+        color: rgba($white, 0.5);
+        height: 30px;
+        margin-bottom: 15px;
+    }
+
+    .tips{
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        height: calc(100% - 105px);
+    
+        .tip{
+            display: flex;
+            gap:10px;
+            height: 80px;
+            min-width: 290px;
+            width: calc(50% - 10px);
+    
+            .icon{
+                width: 80px;
+                height: 80px;
+                background: $lightBlack;
+                border-radius:100%;
+            }
+    
+            .details{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+    
+            .author{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+    
+                .tag{
+                    padding: 2px 8px;
+                    border-radius: 5px;
+                    background: $secondaryPurple;
+                    font-weight: 500;
+                    font-size: 13px;
+    
+                    &.dark{
+                        color: $black;
+                    }
+                }
+    
+                .read-time{
+                    display: flex;
+                    align-items: center;
+    
+                    .image{
+                        width: 26px;
+                        height: 26px;
+                        background-image: url('https://images.unsplash.com/photo-1552728089-57bdde30beb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80');
+                        background-size: cover;
+                        border-radius: 100%;
+                        z-index: 1;
+                    }
+    
+                    span{
+                        border:solid 1px rgba($white, 0.2);
+                        font-size: 14px;
+                        padding:2px 15px 2px 25px;
+                        border-radius: 5px;
+                        position: relative;
+                        left: -20px;
+                    }
+                }
+                
+            }
+        }
+    }
+}

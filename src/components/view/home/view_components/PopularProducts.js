@@ -6,7 +6,7 @@ const PopularProducts = () => {
             <div className="display-card-name">
                 <div> 
                     <div className="bar"></div>
-                    <p> Popular Product </p>
+                    <h3> Popular Product </h3>
                 </div>
             </div> 
 

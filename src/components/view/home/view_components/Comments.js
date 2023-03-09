@@ -6,7 +6,7 @@ const Comments = () => {
             <div className="display-card-name">
                 <div> 
                     <div className="bar"></div>
-                    <p> Comments </p>
+                    <h3> Comments </h3>
                 </div>
             </div> 
             <div className="display-card-comment-list">

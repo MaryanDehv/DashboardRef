@@ -1,0 +1,19 @@
+.more_customers {
+    p{
+        color: rgba($white , 0.5);
+        min-height: 70px;
+        margin-bottom: 10px;
+    }
+    .socials{
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        height: calc(100% - 160px);
+    
+        button{
+            width: calc(100% / 3);
+            height: fit-content;
+        }
+    }
+}

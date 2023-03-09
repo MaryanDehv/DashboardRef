@@ -7,7 +7,7 @@ const Overview = ({filter: Filter}) => {
             <div className="display-card-name">
                 <div> 
                     <div className="bar"></div>
-                    <p> overview </p>
+                    <h3> overview </h3>
                 </div>
                 <Filter />
             </div> 
