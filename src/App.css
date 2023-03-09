@@ -364,6 +364,58 @@ button.full {
   justify-content: space-between;
 }
 
+.graph {
+  height: calc(100% - 80px);
+  width: calc(100% - 20px);
+  margin-left: auto;
+  position: relative;
+}
+.graph .graph-y-axis {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.graph .graph-y-axis, .graph .graph-x-axis {
+  color: rgba(252, 252, 252, 0.3);
+}
+.graph_main-view {
+  height: 100%;
+  width: 100%;
+}
+.graph_main-view .bar-container, .graph_main-view .graph-x-axis span {
+  width: 14.2857142857%;
+}
+.graph_main-view .graph-x-axis span {
+  display: inline-block;
+  text-align: center;
+}
+.graph_bars-container {
+  height: 100%;
+  display: flex;
+}
+.graph_bars-container .bar-container {
+  height: 100%;
+  position: relative;
+}
+.graph_bars-container .bar-container:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 100%;
+  background: #83bf6e;
+  border-radius: 5px;
+}
+.graph_bars-container .bar-container:not(:last-child) {
+  border-right: 1px solid #272b30;
+}
+
 .side_bar {
   background: #1a1d1f;
   padding: 25px;

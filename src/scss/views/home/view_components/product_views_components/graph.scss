@@ -1,0 +1,61 @@
+.graph{
+    height: calc(100% - 80px);
+    width: calc(100% - 20px);
+    margin-left: auto;
+    position: relative;
+
+    .graph-y-axis{
+        position: absolute;
+        top: 0;
+        left: -20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .graph-y-axis ,.graph-x-axis{
+        color: rgba($white , 0.3);
+    }
+
+    &_main-view{
+        height: 100%;
+        width: 100%;
+
+        .bar-container , .graph-x-axis span{
+            width: calc(100% / 7);
+        }
+
+        .graph-x-axis span{
+            display: inline-block;
+            text-align: center;
+        }
+    }
+
+    &_bars-container{
+        height: 100%;
+        display: flex;
+
+        .bar-container{
+            height: 100%;
+            position: relative;
+
+            &:after{
+                content:'';
+                position: absolute;
+                width: 50%;
+                left: 0;
+                right: 0;
+                margin: auto;
+                // height will change based on data
+                height: 100%;
+                background: $primaryGreen;
+                border-radius: 5px;
+            }
+            
+            &:not(:last-child){
+                border-right: 1px solid $lightBlack;
+            }
+        }
+    }
+}
