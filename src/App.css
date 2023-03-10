@@ -45,12 +45,16 @@ button.full {
 .filter > li {
   position: relative;
   width: 100%;
+  cursor: pointer;
 }
 .filter > li .filter-subject {
   display: flex;
   justify-content: space-around;
 }
-.filter > li > ul {
+.filter > li .filter-subject span:nth-child(1) {
+  color: rgba(252, 252, 252, 0.5);
+}
+.filter > li > .filter-dropdown {
   background: #1a1d1f;
   border: solid 1px #272b30;
   width: 100%;
@@ -58,11 +62,14 @@ button.full {
   top: 40px;
   padding: 5px;
 }
-.filter > li > ul li {
+.filter > li > .filter-dropdown.hidden {
+  display: none;
+}
+.filter > li > .filter-dropdown li {
   margin: 5px 0px;
   padding: 5px;
 }
-.filter > li > ul li:hover {
+.filter > li > .filter-dropdown li:hover {
   background: #272b30;
   padding: 5px;
   border-radius: 10px;
@@ -408,6 +415,10 @@ button.full {
 .graph .graph-y-axis, .graph .graph-x-axis {
   color: rgba(252, 252, 252, 0.3);
 }
+.graph .graph-x-axis {
+  position: relative;
+  top: 7px;
+}
 .graph_main-view {
   height: 100%;
   width: 100%;
@@ -526,6 +537,8 @@ button.full {
 .more_customers .socials button {
   width: 33.3333333333%;
   height: fit-content;
+  display: flex;
+  gap: 5px;
 }
 
 .refund_req .refund_notice {
@@ -574,6 +587,9 @@ button.full {
   background: #272b30;
   border-bottom: solid 1px #111315;
   border-top: solid 1px rgba(252, 252, 252, 0.1);
+}
+.side_bar .item-container .side_bar-icon {
+  margin-right: 10px;
 }
 .side_bar-toggle-container {
   gap: 20px;
@@ -658,8 +674,33 @@ button.full {
     display: block;
   }
 }
+@media only screen and (max-width: 425px) {
+  .top_bar-search-container, .top_bar-nav-container {
+    width: 40% !important;
+    text-align: center;
+  }
+}
+.top_bar svg {
+  color: rgba(252, 252, 252, 0.5);
+}
 .top_bar-search-container {
   max-width: 270px;
+  position: relative;
+}
+.top_bar-search-container .search-icon, .top_bar-search-container .shortcut {
+  position: absolute;
+  top: 0;
+}
+.top_bar-search-container .search-icon {
+  left: 10px;
+  top: 11px;
+}
+.top_bar-search-container .shortcut {
+  right: 10px;
+  background: #111315;
+  padding: 3px 13px;
+  top: 5px;
+  border-radius: 5px;
 }
 .top_bar-search-container input {
   background: #272b30;
@@ -667,10 +708,17 @@ button.full {
   color: #fcfcfc;
   padding: 10px;
   width: 100%;
+  text-indent: 30px;
 }
 @media only screen and (max-width: 425px) {
   .top_bar-search-container {
     width: auto;
+  }
+  .top_bar-search-container input, .top_bar-search-container .shortcut {
+    display: none;
+  }
+  .top_bar-search-container .search-icon {
+    position: static;
   }
 }
 .top_bar-nav-container {
@@ -696,10 +744,17 @@ button.full {
   width: 100%;
 }
 .top_bar-icon.top_bar-avatar > div {
-  height: 20px;
-  width: 20px;
-  background: pink;
+  height: 30px;
+  width: 30px;
+  background-image: url("https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=786&q=80");
+  background-size: cover;
+  background-position: center;
   border-radius: 100%;
+}
+@media only screen and (max-width: 425px) {
+  .top_bar-icon.top_bar-avatar {
+    display: none;
+  }
 }
 .top_bar-icon span {
   cursor: pointer;

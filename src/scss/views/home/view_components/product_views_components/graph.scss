@@ -18,6 +18,11 @@
         color: rgba($white , 0.3);
     }
 
+    .graph-x-axis{
+        position: relative;
+        top:7px;
+    }
+
     &_main-view{
         height: 100%;
         width: 100%;

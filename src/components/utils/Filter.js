@@ -1,13 +1,15 @@
+import {FaAngleUp , FaAngleDown} from "react-icons/fa";
+
 const Filter = () => {
     return(
         <ul className="filter round">
-            {/* <li>
-                <div className="filter-subject"> <span> test </span> <span> ^</span> </div>
-                <ul className="filter-dropdown round">
+            <li>
+                <div className="filter-subject"> <span> All time </span> <span> <FaAngleUp /></span> </div>
+                <ul className="filter-dropdown hidden round">
                     <li> water </li>
                     <li> Cheese </li>
                 </ul>
-            </li> */}
+            </li>
         </ul>
     )
 }

@@ -7,19 +7,28 @@
     >li{
         position: relative;
         width: 100%;
+        cursor: pointer;
 
         .filter-subject{
             display: flex;
             justify-content: space-around;
+
+            span:nth-child(1){
+                color: rgba($white , 0.5);
+            }
         }
         
-        >ul{
+        >.filter-dropdown{
             background: $grayBlack;
             border: solid 1px $lightBlack;
             width: 100%;
             position: absolute;
             top:40px;
             padding: 5px;
+
+            &.hidden{
+                display: none;
+            }
 
             li{
                 margin: 5px 0px;
