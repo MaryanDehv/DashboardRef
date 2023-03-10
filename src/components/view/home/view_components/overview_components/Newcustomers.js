@@ -1,3 +1,5 @@
+import {FaArrowRight} from "react-icons/fa";
+
 const Newcustomers = () => {
     return(
         <div className="new_customers">
@@ -21,7 +23,7 @@ const Newcustomers = () => {
                     <p>Elbert</p>
                 </div>
                 <div className="view_all circle">
-                    <div></div>
+                    <div><FaArrowRight /></div>
                     <p>View All</p>
                 </div>
             </div>

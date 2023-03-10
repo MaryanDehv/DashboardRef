@@ -1,3 +1,5 @@
+import {FaShoppingBag , FaWaveSquare , FaAngleUp , FaAngleDown , FaInfoCircle} from "react-icons/fa";
+
 const AnalyticsTabs = () => {
     return(
         <div className="analytics_tabs round">
@@ -5,12 +7,12 @@ const AnalyticsTabs = () => {
             <div className="tab customers active round">
                 <div className="tab-inner">
                     <div className="icon">
-                        icon
+                        <FaShoppingBag />
                     </div>
                     <div className="data">
-                        <div className="caveat"><span>Customers</span><span className="caveat-icon">i</span></div>
+                        <div className="caveat"><span>Customers</span><span className="caveat-icon"><FaInfoCircle /></span></div>
                         <div className="number">1024</div>
-                        <span className="trend increase"><span className="trend_direction">^</span> <span className="percentage">37.8%</span></span>
+                        <span className="trend increase"><span className="trend_direction"><FaAngleUp /></span> <span className="percentage">37.8%</span></span>
                     </div>
                 </div>
             </div>
@@ -18,12 +20,12 @@ const AnalyticsTabs = () => {
             <div className="tab income round">
                 <div className="tab-inner">
                     <div className="icon">
-                        icon
+                        <FaWaveSquare />
                     </div>
                     <div className="data">
-                        <div className="caveat"><span>Income</span><span className="caveat-icon">i</span></div>
+                        <div className="caveat"><span>Income</span><span className="caveat-icon"><FaInfoCircle /></span></div>
                         <div className="number">1024</div>
-                        <span className="trend decrease"><span className="trend_direction">^</span> <span className="percentage">37.8%</span></span>
+                        <span className="trend decrease"><span className="trend_direction"><FaAngleDown /></span> <span className="percentage">37.8%</span></span>
                     </div>
                 </div>
             </div>

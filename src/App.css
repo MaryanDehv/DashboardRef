@@ -28,7 +28,7 @@ button.full {
 
 @media screen and (max-width: 768px) {
   .main_view, .top_bar {
-    width: calc(100% - 180px);
+    width: calc(100% - 90px);
   }
 }
 @media screen and (max-width: 590px) {
@@ -202,10 +202,13 @@ button.full {
 }
 .new_customers-list .view_all div {
   background: #272b30;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
 }
 .new_customers-list .circle div {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
 }
 
@@ -223,6 +226,15 @@ button.full {
   flex-wrap: wrap;
   place-content: center;
 }
+.analytics_tabs .tab .icon {
+  height: 40px;
+  width: 40px;
+  background: #83bf6e;
+  border-radius: 100%;
+  display: flex;
+  place-content: center;
+  flex-wrap: wrap;
+}
 .analytics_tabs .tab-inner {
   display: flex;
   gap: 10px;
@@ -239,6 +251,10 @@ button.full {
   display: flex;
   gap: 5px;
 }
+.analytics_tabs .tab .data .caveat svg {
+  position: relative;
+  top: 1px;
+}
 .analytics_tabs .tab .data .number {
   font-size: 35px;
   font-weight: bold;
@@ -250,6 +266,10 @@ button.full {
   font-size: 12px;
   width: fit-content;
   padding: 1px 8px;
+}
+.analytics_tabs .tab .data .trend svg {
+  position: relative;
+  top: 1px;
 }
 .analytics_tabs .tab .data .trend.increase {
   background: rgba(131, 191, 110, 0.2);
@@ -286,8 +306,8 @@ button.full {
   gap: 10px;
 }
 .display-card-products .product .details .image {
-  width: 70px;
-  height: 100%;
+  width: 60px;
+  height: 60px;
   background-size: cover;
   background-position: center;
   background-image: url("https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
@@ -324,6 +344,10 @@ button.full {
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
+  padding: 15px 0px;
+}
+.display-card .comment:not(:last-child) {
+  border-bottom: solid 1px #272b30;
 }
 .display-card .comment .image {
   width: 60px;
@@ -359,9 +383,11 @@ button.full {
   margin: 10px 0px;
 }
 .display-card .comment .container .actions {
-  max-width: 240px;
   display: flex;
   justify-content: space-between;
+}
+.display-card .comment .container .actions svg {
+  color: rgba(252, 252, 252, 0.4);
 }
 
 .graph {
@@ -405,6 +431,7 @@ button.full {
   content: "";
   position: absolute;
   width: 50%;
+  max-width: 40px;
   left: 0;
   right: 0;
   margin: auto;
@@ -439,6 +466,9 @@ button.full {
   height: 80px;
   background: #272b30;
   border-radius: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
 }
 .pro_tips .tips .tip .details {
   display: flex;
@@ -507,6 +537,9 @@ button.full {
   height: 60px;
   background: #272b30;
   border-radius: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
 }
 .refund_req .refund_notice p {
   width: calc(100% - 60px);
@@ -551,19 +584,56 @@ button.full {
   display: flex;
   background: #111315;
 }
-.side_bar-toggle-container .side_bar-toggle-buttons > div {
+.side_bar-toggle-container .side_bar-toggle-buttons .mode {
   width: 50%;
   text-align: center;
   margin: 5px;
 }
-.side_bar-toggle-container .side_bar-toggle-buttons > div.active {
+.side_bar-toggle-container .side_bar-toggle-buttons .mode.active {
   background: #1a1d1f;
 }
 @media screen and (max-width: 768px) {
-  .side_bar {
-    width: 180px;
+  .side_bar-toggle-container .side_bar-toggle-buttons .mode {
+    width: 100%;
   }
-  .side_bar-name {
+  .side_bar-toggle-container .side_bar-toggle-buttons .mode.unactive, .side_bar-toggle-container .side_bar-toggle-buttons .mode .name {
+    display: none;
+  }
+}
+.side_bar-help-getting-started {
+  display: flex;
+  gap: 10px;
+}
+.side_bar-help-getting-started svg {
+  font-size: 20px;
+}
+.side_bar-help-getting-started p {
+  font-size: 15px;
+}
+@media screen and (max-width: 768px) {
+  .side_bar-help-getting-started {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .side_bar-help-getting-started p, .side_bar-help-getting-started .notice {
+    display: none !important;
+  }
+}
+.side_bar-help-getting-started .notice {
+  display: inline-block;
+  text-align: center;
+  color: #111315;
+  font-weight: bold;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  background: #cabdff;
+}
+@media screen and (max-width: 768px) {
+  .side_bar {
+    width: 90px;
+  }
+  .side_bar-name, .side_bar .arrow {
     display: none;
   }
 }

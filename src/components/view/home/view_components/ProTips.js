@@ -1,4 +1,5 @@
 import Tip from "./pro_tips_components/Tip";
+import {FaArrowRight , FaCalendarAlt , FaPencilRuler , FaVideo , FaPhoneAlt , FaRegCalendarCheck} from "react-icons/fa";
 
 const ProTips = () => {
     return(
@@ -11,12 +12,12 @@ const ProTips = () => {
             </div> 
             <p className="new_ideas"> Need some ideas for the next project? </p>
             <div className="tips">
-                <Tip tip="Early access" time="3 mins read" tag="New"/>
-                <Tip tip="Asset use guidelines" time="Time" tag="Small label"/>
-                <Tip tip="Exclusive Downloads" time="2 mins read"/>
-                <Tip tip="Behind the scenes" time="3 mins read" tag="Hot"/>
-                <Tip tip="Asset use guidelines" time="Time" tag="Popular"/>
-                <Tip tip="Life & work updates" time="3 mins read"/>
+                <Tip tip="Early access" time="3 mins read" tag="New" icon={FaCalendarAlt}/>
+                <Tip tip="Asset use guidelines" time="Time" tag="Small label" icon={FaArrowRight}/>
+                <Tip tip="Exclusive Downloads" time="2 mins read" icon={FaPencilRuler}/>
+                <Tip tip="Behind the scenes" time="3 mins read" tag="Hot" icon={FaVideo}/>
+                <Tip tip="Asset use guidelines" time="Time" tag="Popular" icon={FaPhoneAlt}/>
+                <Tip tip="Life & work updates" time="3 mins read" icon={FaRegCalendarCheck}/>
             </div>
         </div>
     )

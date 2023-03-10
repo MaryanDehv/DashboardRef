@@ -23,6 +23,9 @@
                 height: 80px;
                 background: $lightBlack;
                 border-radius:100%;
+                display: flex;
+                flex-wrap: wrap;
+                place-content: center;
             }
     
             .details{

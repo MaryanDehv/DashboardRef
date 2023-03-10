@@ -1,3 +1,5 @@
+import {FaCommentAlt , FaHeart , FaShareAlt} from "react-icons/fa";
+
 const Comment = ({user}) => {
     return(
         <div className="comment">
@@ -23,9 +25,9 @@ const Comment = ({user}) => {
                     Great Work
                 </div>
                 <div className="actions">
-                    <span> @ </span>
-                    <span> @ </span>
-                    <span> @ </span>
+                    <FaCommentAlt />
+                    <FaHeart />
+                    <FaShareAlt />
                 </div>
             </div>
         </div>

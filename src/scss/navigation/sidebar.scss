@@ -42,7 +42,7 @@
             display: flex;
             background: $black;
 
-            >div{
+            .mode{
                 width: 50%;
                 text-align: center;
                 margin: 5px;
@@ -50,7 +50,47 @@
                 &.active{
                     background: $grayBlack;
                 }
+
+                @media screen and (max-width:768px) {
+                    &{
+                        width: 100%;
+                        &.unactive , .name{
+                            display: none;
+                        }
+                    }
+                }
             }
+        }
+    }
+
+    &-help-getting-started{
+        display: flex;
+        gap: 10px;
+        svg{
+            font-size: 20px;
+        }
+
+        p{
+            font-size: 15px;
+        }
+
+        @media screen and (max-width:768px) {
+            flex-direction: column-reverse;
+            align-items: center;
+            p , .notice{
+                display: none !important;
+            }
+        }
+
+        .notice{
+            display: inline-block;
+            text-align: center;
+            color: $black;
+            font-weight: bold;
+            min-width: 20px;
+            height:20px;
+            border-radius: 3px;
+            background: $secondaryPurple;
         }
     }
 
@@ -58,10 +98,10 @@
 
     @media screen and (max-width:768px) {
         &{
-            width: 180px;
+            width: 90px;
         }
 
-        &-name{
+        &-name , .arrow{
             display: none;
         }
     }

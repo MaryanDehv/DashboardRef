@@ -11,6 +11,12 @@
         display: flex;
         gap:10px; 
         margin-bottom:10px;
+        padding: 15px 0px;
+    
+        
+        &:not(:last-child){
+            border-bottom: solid 1px $lightBlack;
+        }
     
         .image{
             width: 60px;
@@ -53,9 +59,12 @@
             }
 
             .actions{
-                max-width: 240px;
                 display: flex;
                 justify-content: space-between;
+
+                svg{
+                    color: rgba($white, 0.4);
+                }
             }
     
         }

@@ -2,6 +2,7 @@ import Dropdown  from "./utils/template/Dropdown";
 import Message from "./utils/dropdown_items/Message";
 import Notification from "./utils/dropdown_items/Notification";
 import Account from "./utils/dropdown_items/Account";
+import { FaBell , FaCommentAlt , FaPlus , FaSearch} from "react-icons/fa";
 
 const Topbar = () => {
 
@@ -12,9 +13,9 @@ const Topbar = () => {
                 <input className="round" type="text" placeholder="search" />
             </div>
             <div className="top_bar-nav-container">
-                <button className="top_bar-create blue-btn white-txt round"> <span className="top_bar-icon add"> + </span> Create </button>
+                <button className="top_bar-create blue-btn white-txt round"> <span className="top_bar-icon add"> <FaPlus /> </span> Create </button>
                 <div className="top_bar-icon message"> 
-                    <span> message </span>
+                    <FaCommentAlt />
                     <ul className="top_bar-icon-dropdown hidden round">
                         <h3> Message </h3>
                         <Dropdown component={Message} />
@@ -23,7 +24,7 @@ const Topbar = () => {
                 </div>
 
                 <div className="top_bar-icon notification">
-                    <span> notif </span>
+                    <FaBell />
                     <ul className="top_bar-icon-dropdown hidden round">
                         <h3> Notification </h3>
                         <Dropdown component={Notification} />

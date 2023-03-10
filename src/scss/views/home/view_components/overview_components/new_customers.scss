@@ -73,13 +73,16 @@
         .view_all{
             div {
                 background: $lightBlack;
+                display: flex;
+                flex-wrap: wrap;
+                place-content: center;
             }
         }
 
         .circle{
             div{
-                width: 80px;
-                height: 80px;
+                width: 60px;
+                height: 60px;
                 border-radius: 100%;
             }
         }

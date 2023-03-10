@@ -1,7 +1,7 @@
-const Tip = ({tip , author , time , tag}) => {
+const Tip = ({tip , author , time , tag , icon: Icon}) => {
     return(
         <div class="tip">
-            <div className="icon"></div>
+            <div className="icon"><Icon /></div>
             <div className="details">
                 <h4> {tip} </h4>
                 <div className="author">

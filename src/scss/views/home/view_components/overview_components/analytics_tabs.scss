@@ -11,6 +11,16 @@
         display: flex;
         flex-wrap: wrap;
         place-content: center;
+
+        .icon{
+            height:40px;
+            width: 40px;
+            background: $primaryGreen;
+            border-radius: 100%;
+            display: flex;
+            place-content: center;
+            flex-wrap: wrap;
+        }
         
         &-inner{
             display: flex;
@@ -30,7 +40,12 @@
                 opacity: 0.5;
                 font-size: 12px;
                 display: flex;
-                gap:5px
+                gap:5px;
+
+                svg{
+                    position: relative;
+                    top:1px;
+                }
             }
 
             .number{
@@ -45,6 +60,11 @@
                 font-size: 12px;
                 width: fit-content;
                 padding: 1px 8px;
+
+                svg{
+                    position: relative;
+                    top: 1px;
+                }
                 
                 // will need to reuse these - move out form here
                 &.increase{
