@@ -88,7 +88,7 @@
         align-items: center;
         width: 260px;
 
-        button{
+        .top_bar-create{
             width: 100px;
             svg{
                 color: $white;
@@ -142,7 +142,8 @@
         &-dropdown{
             position: absolute;
             width: 390px;
-            background:$lightGrayishBlack;
+            background:$black;
+            border: solid 1px $lightGrayishBlack;
             padding: 20px;
             top: 80px;
             right:0;
@@ -151,16 +152,17 @@
                 display: flex;
                 gap: 10px;
                 padding: 20px;
+                border-bottom: 1px solid $lightGrayishBlack;
 
                 .avatar{
-                    // border-radius: 100%;
-                    // width: 50px;
-                    // height: 50px;
-                    // background: $white;
-                    // background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
-                    // background-size: cover;
-                    // background-position: center;
-                    // position: relative;
+                    border-radius: 100%;
+                    width: 50px;
+                    height: 50px;
+                    background: $white;
+                    background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+                    background-size: cover;
+                    background-position: center;
+                    position: relative;
 
                     .icon{
                         position: absolute;
@@ -197,7 +199,7 @@
             }
         }
 
-        &-dropdown.hidden{
+        &-dropdown[data-hidden="true"]{
             display: none;
         }
         

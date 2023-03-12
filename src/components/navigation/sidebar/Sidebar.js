@@ -45,8 +45,13 @@ const Sidebar = ({toggle}) => {
     const [darkMode , setDarkMode] = useState(true);
 
     const darkModeToggle = () => {
-        // setDarkMode(!darkMode);
+        const buttons = document.querySelectorAll('.mode');
+        buttons.forEach(button => button.addEventListener('click' , (e) => {
+            setDarkMode(e.currentTarget.textContent.includes('Dark'))
+        }))
     }
+
+    darkModeToggle();
 
     return (
         <>
@@ -73,8 +78,8 @@ const Sidebar = ({toggle}) => {
                 <div className="side_bar-toggle-container">
                     <div className="side_bar-help-getting-started"> <span> <FaQuestionCircle /> </span> <p> Help getting started  </p><span className="notice"> 8 </span> </div>
                     <div className="side_bar-toggle-buttons"> 
-                        <div className="mode unactive" onClick={() => darkModeToggle()}> <FaSun /> <span className="name"> Light </span></div>
-                        <div className="mode active" onClick={() => darkModeToggle()}> <FaMoon /> <span className="name"> Dark </span></div>
+                        <div className={`mode ${darkMode ? '' : 'active'}`}> <FaSun /> <span className="name"> Light </span></div>
+                        <div className={`mode ${darkMode ? 'active' : ''}`}> <FaMoon /> <span className="name"> Dark </span></div>
                     </div>
                 </div>
             </ul>

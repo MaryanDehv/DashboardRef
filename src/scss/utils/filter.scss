@@ -21,9 +21,9 @@
             width: 100%;
             position: absolute;
             top:40px;
-            padding: 5px;
+            z-index: 1;
 
-            &.hidden{
+            &[data-hidden="true"]{
                 display: none;
             }
 
