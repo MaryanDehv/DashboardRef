@@ -76,6 +76,9 @@ button.full {
 .has-sub .sub_categories {
   padding-left: 18px;
 }
+.has-sub .sub_categories.hidden {
+  display: none;
+}
 .has-sub .sub_categories .dropdown {
   position: relative;
 }

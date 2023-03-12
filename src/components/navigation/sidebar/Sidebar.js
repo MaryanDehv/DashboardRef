@@ -1,5 +1,6 @@
 import SideBarItems from "./side_bar_components/SideBarItems";
 import {FaTimes, FaAngleUp , FaSquareFull , FaSun , FaMoon , FaQuestionCircle , FaHome , FaShapes , FaUserAlt , FaHotel , FaChartPie , FaBahai, FaUser} from "react-icons/fa";
+import { useState } from "react";
 
 const navList = [
     {
@@ -41,6 +42,12 @@ const navList = [
 ]
 
 const Sidebar = ({toggle}) => {
+    const [darkMode , setDarkMode] = useState(true);
+
+    const darkModeToggle = () => {
+        // setDarkMode(!darkMode);
+    }
+
     return (
         <>
             <div className="side_bar-logo-container">
@@ -66,8 +73,8 @@ const Sidebar = ({toggle}) => {
                 <div className="side_bar-toggle-container">
                     <div className="side_bar-help-getting-started"> <span> <FaQuestionCircle /> </span> <p> Help getting started  </p><span className="notice"> 8 </span> </div>
                     <div className="side_bar-toggle-buttons"> 
-                        <div className="mode unactive"> <FaSun /> <span className="name"> Light </span></div>
-                        <div className="mode active"> <FaMoon /> <span className="name"> Dark </span></div>
+                        <div className="mode unactive" onClick={() => darkModeToggle()}> <FaSun /> <span className="name"> Light </span></div>
+                        <div className="mode active" onClick={() => darkModeToggle()}> <FaMoon /> <span className="name"> Dark </span></div>
                     </div>
                 </div>
             </ul>

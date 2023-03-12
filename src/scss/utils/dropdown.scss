@@ -1,6 +1,11 @@
 .has-sub{
     .sub_categories{
         padding-left:18px;
+
+        &.hidden{
+            display: none;
+        }
+        
         .dropdown{
             position: relative;
             &::after{
