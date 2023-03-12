@@ -50,9 +50,7 @@ button.full {
 .filter > li .filter-subject {
   display: flex;
   justify-content: space-around;
-}
-.filter > li .filter-subject span:nth-child(1) {
-  color: rgba(252, 252, 252, 0.5);
+  color: #747a81;
 }
 .filter > li > .filter-dropdown {
   background: #1a1d1f;
@@ -85,29 +83,33 @@ button.full {
   content: "";
   position: absolute;
   height: calc(100% - 20px);
-  border-left: solid 2px #fcfcfc;
-  border-left: solid 2px #fcfcfc;
+  border-left: solid 2px #272b30;
   border-bottom-left-radius: 4px;
   width: 100%;
   top: 0;
 }
 .has-sub .sub_categories .dropdown li {
   position: relative;
-  background: #272b30;
   margin-left: 20px;
   padding: 5px 10px;
+  z-index: 1;
+  border: solid 1px transparent;
+}
+.has-sub .sub_categories .dropdown li:hover {
+  background: #272b30;
   border-bottom: solid 1px #111315;
-  border-top: solid 1px rgba(252, 252, 252, 0.1);
+  border-top: solid 1px #747a81;
+  color: #fcfcfc;
 }
 .has-sub .sub_categories .dropdown li:after {
   content: "";
   position: absolute;
   top: 0;
-  left: -20px;
+  left: -21px;
   width: 18px;
   height: 50%;
-  border-left: solid 2px #fcfcfc;
-  border-bottom: solid 2px #fcfcfc;
+  border-left: solid 2px #272b30;
+  border-bottom: solid 2px #272b30;
   border-bottom-left-radius: 10px;
 }
 .has-sub .sub_categories .dropdown li:not(:last-child) {
@@ -205,6 +207,10 @@ button.full {
 .new_customers-welcome p {
   width: 240px;
   font-size: 14px;
+  color: #747a81;
+}
+.new_customers-welcome p .hide {
+  color: #fcfcfc;
 }
 @media only screen and (max-width: 768px) {
   .new_customers-welcome p {
@@ -281,6 +287,9 @@ button.full {
   place-content: center;
   flex-wrap: wrap;
 }
+.analytics_tabs .tab .icon svg {
+  color: #111315;
+}
 .analytics_tabs .tab-inner {
   display: flex;
   gap: 10px;
@@ -330,7 +339,7 @@ button.full {
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
-  color: rgba(252, 252, 252, 0.5);
+  color: #747a81;
   border-bottom: 1px solid #272b30;
   width: 100%;
   margin-bottom: 10px;
@@ -415,7 +424,7 @@ button.full {
   gap: 5px;
 }
 .display-card .comment .container .details .user .handle, .display-card .comment .container .details .time {
-  opacity: 0.5;
+  color: #747a81;
 }
 .display-card .comment .container .product {
   display: flex;
@@ -433,7 +442,7 @@ button.full {
   justify-content: space-between;
 }
 .display-card .comment .container .actions svg {
-  color: rgba(252, 252, 252, 0.4);
+  color: #747a81;
 }
 
 .graph {
@@ -452,7 +461,7 @@ button.full {
   height: 100%;
 }
 .graph .graph-y-axis, .graph .graph-x-axis {
-  color: rgba(252, 252, 252, 0.3);
+  color: #747a81;
 }
 .graph .graph-x-axis {
   position: relative;
@@ -494,7 +503,7 @@ button.full {
 }
 
 .pro_tips .new_ideas {
-  color: rgba(252, 252, 252, 0.5);
+  color: #747a81;
   height: 30px;
   margin-bottom: 15px;
 }
@@ -511,10 +520,13 @@ button.full {
   min-width: 290px;
   width: calc(50% - 10px);
 }
+.pro_tips .tips .tip.tip-asset .icon {
+  background: #272b30;
+}
 .pro_tips .tips .tip .icon {
   width: 80px;
   height: 80px;
-  background: #272b30;
+  border: solid 1px #272b30;
   border-radius: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -553,7 +565,8 @@ button.full {
   z-index: 1;
 }
 .pro_tips .tips .tip .author .read-time span {
-  border: solid 1px rgba(252, 252, 252, 0.2);
+  border: solid 1px #272b30;
+  color: #747a81;
   font-size: 14px;
   padding: 2px 15px 2px 25px;
   border-radius: 5px;
@@ -562,7 +575,7 @@ button.full {
 }
 
 .more_customers p {
-  color: rgba(252, 252, 252, 0.5);
+  color: #747a81;
   min-height: 70px;
   margin-bottom: 10px;
 }
@@ -579,6 +592,9 @@ button.full {
   display: flex;
   gap: 5px;
 }
+.more_customers .socials button svg {
+  color: #747a81;
+}
 
 .refund_req .refund_notice {
   display: flex;
@@ -587,21 +603,37 @@ button.full {
 .refund_req .refund_notice .icon {
   width: 60px;
   height: 60px;
-  background: #272b30;
+  background: #ffbc99;
   border-radius: 100%;
   display: flex;
   flex-wrap: wrap;
   place-content: center;
 }
+.refund_req .refund_notice .icon svg {
+  color: #ff6a55;
+}
 .refund_req .refund_notice p {
   width: calc(100% - 60px);
+  color: #747a81;
+}
+.refund_req .refund_notice .refund-requests, .refund_req .refund_notice .new-requests {
+  color: #fcfcfc;
 }
 
 .side_bar {
   background: #1a1d1f;
   padding: 25px;
   width: 250px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   overflow-y: scroll;
+  color: #747a81;
+}
+.side_bar svg {
+  color: #747a81;
+}
+.side_bar::-webkit-scrollbar {
+  display: none;
 }
 @media only screen and (max-width: 590px) {
   .side_bar {
@@ -631,7 +663,10 @@ button.full {
 .side_bar-item .item-container:hover, .side_bar-item .item-container.active {
   background: #272b30;
   border-bottom: solid 1px #111315;
-  border-top: solid 1px rgba(252, 252, 252, 0.1);
+  border-top: solid 1px #747a81;
+}
+.side_bar-item .item-container:hover svg, .side_bar-item .item-container:hover, .side_bar-item .item-container.active svg, .side_bar-item .item-container.active {
+  color: #fcfcfc;
 }
 .side_bar-item .item-container .side_bar-icon {
   margin-right: 17px;
@@ -650,8 +685,11 @@ button.full {
   text-align: center;
   margin: 5px;
 }
-.side_bar-toggle-container .side_bar-toggle-buttons .mode.active {
-  background: #1a1d1f;
+.side_bar-toggle-container .side_bar-toggle-buttons .mode:hover, .side_bar-toggle-container .side_bar-toggle-buttons .mode.active {
+  background: #272b30;
+}
+.side_bar-toggle-container .side_bar-toggle-buttons .mode:hover svg, .side_bar-toggle-container .side_bar-toggle-buttons .mode.active svg {
+  color: #fcfcfc;
 }
 @media screen and (max-width: 768px) {
   .side_bar-toggle-container .side_bar-toggle-buttons .mode {
@@ -694,7 +732,7 @@ button.full {
   .side_bar {
     width: 90px;
   }
-  .side_bar-name, .side_bar .arrow {
+  .side_bar-name, .side_bar .arrow, .side_bar .has-sub .sub_categories {
     display: none;
   }
 }
@@ -725,9 +763,6 @@ button.full {
     text-align: center;
   }
 }
-.top_bar svg {
-  color: rgba(252, 252, 252, 0.5);
-}
 .top_bar-search-container {
   max-width: 270px;
   position: relative;
@@ -746,6 +781,9 @@ button.full {
   padding: 3px 13px;
   top: 5px;
   border-radius: 5px;
+}
+.top_bar-search-container svg {
+  color: #747a81;
 }
 .top_bar-search-container input {
   background: #272b30;
@@ -775,6 +813,12 @@ button.full {
 }
 .top_bar-nav-container button {
   width: 100px;
+}
+.top_bar-nav-container button svg {
+  color: #fcfcfc;
+}
+.top_bar-nav-container svg {
+  color: #747a81;
 }
 @media only screen and (max-width: 425px) {
   .top_bar-nav-container button {
@@ -807,7 +851,7 @@ button.full {
 .top_bar-icon-dropdown {
   position: absolute;
   width: 390px;
-  background: #1a1d1f;
+  background: #272b30;
   padding: 20px;
   top: 80px;
   right: 0;

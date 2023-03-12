@@ -1,9 +1,20 @@
 .side_bar{
-    background: $grayBlack;
+    background: $darkGrayishBlack;
     padding: 25px;
     width: 250px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     overflow-y: scroll;
+    color: $gray;
 
+    svg{
+        color: $gray;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
     @media only screen and (max-width:590px){
         &{
             display: none;
@@ -36,9 +47,13 @@
             border: solid 1px transparent;
 
             &:hover , &.active{
-                background: $lightBlack;
+                background: $lightGrayishBlack;
                 border-bottom: solid 1px $black;
-                border-top: solid 1px rgba($white, 0.1);
+                border-top: solid 1px $gray;
+                
+                svg , &{
+                    color: $white;
+                }
             }
 
             .side_bar-icon{
@@ -62,8 +77,12 @@
                 text-align: center;
                 margin: 5px;
 
-                &.active{
-                    background: $grayBlack;
+                &:hover , &.active{
+                    background: $lightGrayishBlack;
+
+                    svg{
+                        color: $white;
+                    }
                 }
 
                 @media screen and (max-width:768px) {
@@ -116,7 +135,7 @@
             width: 90px;
         }
 
-        &-name , .arrow{
+        &-name , .arrow , .has-sub .sub_categories{
             display: none;
         }
     }

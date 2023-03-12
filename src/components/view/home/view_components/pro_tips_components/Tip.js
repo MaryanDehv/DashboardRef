@@ -1,6 +1,6 @@
 const Tip = ({tip , author , time , tag , icon: Icon}) => {
     return(
-        <div class="tip">
+        <div className={`tip ${tip == 'Asset use guidelines' ? 'tip-asset' : ''}`}>
             <div className="icon"><Icon /></div>
             <div className="details">
                 <h4> {tip} </h4>

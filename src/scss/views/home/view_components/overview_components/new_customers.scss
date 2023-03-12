@@ -18,6 +18,11 @@
         p{
             width: 240px;
             font-size: 14px;
+            color: $gray;
+
+            .hide{
+                color: $white;
+            }
 
             @media only screen and (max-width:768px) {
                 width: 160px;
@@ -72,7 +77,7 @@
 
         .view_all{
             div {
-                background: $lightBlack;
+                background: $lightGrayishBlack;
                 display: flex;
                 flex-wrap: wrap;
                 place-content: center;

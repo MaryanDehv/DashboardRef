@@ -1,6 +1,6 @@
 .more_customers {
     p{
-        color: rgba($white , 0.5);
+        color: $gray;
         min-height: 70px;
         margin-bottom: 10px;
     }
@@ -16,6 +16,10 @@
             height: fit-content;
             display: flex;
             gap: 5px;
+
+            svg{
+                color: $gray;
+            }
         }
     }
 }

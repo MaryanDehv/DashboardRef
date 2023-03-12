@@ -15,7 +15,7 @@
     
         
         &:not(:last-child){
-            border-bottom: solid 1px $lightBlack;
+            border-bottom: solid 1px $lightGrayishBlack;
         }
     
         .image{
@@ -41,7 +41,7 @@
                 }
 
                 .user .handle , .time{
-                    opacity: 0.5;
+                    color: $gray;
                 }
             }
 
@@ -63,7 +63,7 @@
                 justify-content: space-between;
 
                 svg{
-                    color: rgba($white, 0.4);
+                    color: $gray;
                 }
             }
     

@@ -1,5 +1,5 @@
 .filter{
-    border: solid 1px $lightBlack;
+    border: solid 1px $lightGrayishBlack;
     width: 130px;
     display: flex;
     justify-content: space-around;
@@ -12,15 +12,12 @@
         .filter-subject{
             display: flex;
             justify-content: space-around;
-
-            span:nth-child(1){
-                color: rgba($white , 0.5);
-            }
+            color: $gray;
         }
         
         >.filter-dropdown{
-            background: $grayBlack;
-            border: solid 1px $lightBlack;
+            background: $darkGrayishBlack;
+            border: solid 1px $lightGrayishBlack;
             width: 100%;
             position: absolute;
             top:40px;
@@ -36,7 +33,7 @@
             }
 
             li:hover{
-                background: $lightBlack;
+                background: $lightGrayishBlack;
                 padding: 5px;
                 border-radius: 10px;
             }

@@ -7,30 +7,36 @@
                 content: '';
                 position: absolute;
                 height: calc(100% - 20px);
-                border-left: solid 2px $white;
-                border-left: solid 2px $white;
+                border-left: solid 2px $lightGrayishBlack;
                 border-bottom-left-radius: 4px;
                 width: 100%;
                 top:0;
             }
 
+
             li{
                 position: relative;
-                background: $lightBlack;
                 margin-left: 20px;
                 padding: 5px 10px;
-                border-bottom: solid 1px $black;
-                border-top: solid 1px rgba($white, 0.1);
+                z-index: 1;
+                border: solid 1px transparent;
+
+                &:hover{
+                    background: $lightGrayishBlack;
+                    border-bottom: solid 1px $black;
+                    border-top: solid 1px $gray;
+                    color: $white;
+                }
                 
                 &:after{
                     content:'';
                     position: absolute;
                     top: 0;
-                    left: -20px;
+                    left: -21px;
                     width: 18px;
                     height: 50%;
-                    border-left: solid 2px $white;
-                    border-bottom: solid 2px $white;
+                    border-left: solid 2px $lightGrayishBlack;
+                    border-bottom: solid 2px $lightGrayishBlack;
                     border-bottom-left-radius: 10px;
                 }
 

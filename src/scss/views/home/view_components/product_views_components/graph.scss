@@ -15,7 +15,7 @@
     }
 
     .graph-y-axis ,.graph-x-axis{
-        color: rgba($white , 0.3);
+        color: $gray;
     }
 
     .graph-x-axis{
@@ -60,7 +60,7 @@
             }
             
             &:not(:last-child){
-                border-right: 1px solid $lightBlack;
+                border-right: 1px solid $lightGrayishBlack;
             }
         }
     }
