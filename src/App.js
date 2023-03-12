@@ -1,5 +1,5 @@
 import './App.css';
-import Sidebar from './Components/navigation/Sidebar';
+import Sidebar from './Components/navigation/sidebar/Sidebar';
 import Topbar from './Components/navigation/Topbar';
 import Home from './Components/view/home/main_view/Home';
  

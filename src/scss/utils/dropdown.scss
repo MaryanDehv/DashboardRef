@@ -1,0 +1,43 @@
+.has-sub{
+    .sub_categories{
+        padding-left:18px;
+        .dropdown{
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                height: calc(100% - 20px);
+                border-left: solid 2px $white;
+                border-left: solid 2px $white;
+                border-bottom-left-radius: 4px;
+                width: 100%;
+                top:0;
+            }
+
+            li{
+                position: relative;
+                background: $lightBlack;
+                margin-left: 20px;
+                padding: 5px 10px;
+                border-bottom: solid 1px $black;
+                border-top: solid 1px rgba($white, 0.1);
+                
+                &:after{
+                    content:'';
+                    position: absolute;
+                    top: 0;
+                    left: -20px;
+                    width: 18px;
+                    height: 50%;
+                    border-left: solid 2px $white;
+                    border-bottom: solid 2px $white;
+                    border-bottom-left-radius: 10px;
+                }
+
+                &:not(:last-child){
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}

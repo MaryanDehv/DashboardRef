@@ -2,6 +2,7 @@
     background: $grayBlack;
     padding: 25px;
     width: 250px;
+    overflow-y: scroll;
 
     @media only screen and (max-width:590px){
         &{
@@ -21,22 +22,30 @@
     }
 
     &-item{
-        padding:10px;
-        display: flex;
-        justify-content: space-between;
-        border: solid 1px transparent;
 
-        &:hover , &.active{
-            background: $lightBlack;
-            border-bottom: solid 1px $black;
-            border-top: solid 1px rgba($white, 0.1);
+        li , .item-container{
+            border-radius: 8px;
         }
-    }
 
-    .item-container{
-        .side_bar-icon{
-            margin-right: 10px;
-        }
+       .item-container{
+            display: flex;
+            padding:5px 10px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            justify-content: space-between;
+            border: solid 1px transparent;
+
+            &:hover , &.active{
+                background: $lightBlack;
+                border-bottom: solid 1px $black;
+                border-top: solid 1px rgba($white, 0.1);
+            }
+
+            .side_bar-icon{
+                margin-right: 17px;
+            }
+       }
+       
     }
 
     &-toggle-container{

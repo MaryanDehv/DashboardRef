@@ -75,6 +75,45 @@ button.full {
   border-radius: 10px;
 }
 
+.has-sub .sub_categories {
+  padding-left: 18px;
+}
+.has-sub .sub_categories .dropdown {
+  position: relative;
+}
+.has-sub .sub_categories .dropdown::after {
+  content: "";
+  position: absolute;
+  height: calc(100% - 20px);
+  border-left: solid 2px #fcfcfc;
+  border-left: solid 2px #fcfcfc;
+  border-bottom-left-radius: 4px;
+  width: 100%;
+  top: 0;
+}
+.has-sub .sub_categories .dropdown li {
+  position: relative;
+  background: #272b30;
+  margin-left: 20px;
+  padding: 5px 10px;
+  border-bottom: solid 1px #111315;
+  border-top: solid 1px rgba(252, 252, 252, 0.1);
+}
+.has-sub .sub_categories .dropdown li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 18px;
+  height: 50%;
+  border-left: solid 2px #fcfcfc;
+  border-bottom: solid 2px #fcfcfc;
+  border-bottom-left-radius: 10px;
+}
+.has-sub .sub_categories .dropdown li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
 .main_view-inner .home.grid-display {
   display: grid;
   grid-template-columns: [one] 60% [two] auto;
@@ -562,6 +601,7 @@ button.full {
   background: #1a1d1f;
   padding: 25px;
   width: 250px;
+  overflow-y: scroll;
 }
 @media only screen and (max-width: 590px) {
   .side_bar {
@@ -577,19 +617,24 @@ button.full {
 .side_bar-logo-container {
   height: 70px;
 }
-.side_bar-item {
-  padding: 10px;
+.side_bar-item li, .side_bar-item .item-container {
+  border-radius: 8px;
+}
+.side_bar-item .item-container {
   display: flex;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   justify-content: space-between;
   border: solid 1px transparent;
 }
-.side_bar-item:hover, .side_bar-item.active {
+.side_bar-item .item-container:hover, .side_bar-item .item-container.active {
   background: #272b30;
   border-bottom: solid 1px #111315;
   border-top: solid 1px rgba(252, 252, 252, 0.1);
 }
-.side_bar .item-container .side_bar-icon {
-  margin-right: 10px;
+.side_bar-item .item-container .side_bar-icon {
+  margin-right: 17px;
 }
 .side_bar-toggle-container {
   gap: 20px;
