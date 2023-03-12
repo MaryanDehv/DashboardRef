@@ -10,6 +10,7 @@
         .display-card{
             background: $darkGrayishBlack;
             padding: 18px;
+            overflow: hidden;
             
             >div:not(:last-child){
                 margin-bottom: 30px;

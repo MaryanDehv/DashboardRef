@@ -125,6 +125,7 @@ button.full {
 .main_view-inner .home.grid-display .display-card {
   background: #1a1d1f;
   padding: 18px;
+  overflow: hidden;
 }
 .main_view-inner .home.grid-display .display-card > div:not(:last-child) {
   margin-bottom: 30px;
@@ -267,16 +268,19 @@ button.full {
 .analytics_tabs {
   background: #111315;
   display: flex;
+  flex-wrap: wrap;
   padding: 10px;
   gap: 10px;
+  cursor: pointer;
 }
 .analytics_tabs .tab {
-  width: 50%;
   height: 100%;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   place-content: center;
+  flex-grow: 1;
+  width: 178px;
 }
 .analytics_tabs .tab .icon {
   height: 40px;
@@ -590,6 +594,7 @@ button.full {
   width: 33.3333333333%;
   height: fit-content;
   display: flex;
+  justify-content: center;
   gap: 5px;
 }
 .more_customers .socials button svg {
@@ -679,16 +684,24 @@ button.full {
 .side_bar-toggle-container .side_bar-toggle-buttons {
   display: flex;
   background: #111315;
+  border-radius: 60px;
 }
 .side_bar-toggle-container .side_bar-toggle-buttons .mode {
   width: 50%;
-  text-align: center;
   margin: 5px;
+  cursor: pointer;
+  padding: 4px 0px;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
-.side_bar-toggle-container .side_bar-toggle-buttons .mode:hover, .side_bar-toggle-container .side_bar-toggle-buttons .mode.active {
+.side_bar-toggle-container .side_bar-toggle-buttons .mode.active {
   background: #272b30;
+  color: #fcfcfc;
 }
-.side_bar-toggle-container .side_bar-toggle-buttons .mode:hover svg, .side_bar-toggle-container .side_bar-toggle-buttons .mode.active svg {
+.side_bar-toggle-container .side_bar-toggle-buttons .mode.active svg {
   color: #fcfcfc;
 }
 @media screen and (max-width: 768px) {
@@ -697,6 +710,12 @@ button.full {
   }
   .side_bar-toggle-container .side_bar-toggle-buttons .mode.unactive, .side_bar-toggle-container .side_bar-toggle-buttons .mode .name {
     display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .side_bar-toggle-container {
+    border-top: solid 1px #272b30;
+    padding-top: 30px;
   }
 }
 .side_bar-help-getting-started {

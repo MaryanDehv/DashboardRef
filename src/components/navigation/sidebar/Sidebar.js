@@ -54,9 +54,9 @@ const Sidebar = () => {
                 </div>
                 <div className="side_bar-toggle-container">
                     <div className="side_bar-help-getting-started"> <span> <FaQuestionCircle /> </span> <p> Help getting started  </p><span className="notice"> 8 </span> </div>
-                    <div className="side_bar-toggle-buttons round"> 
-                        <div className="mode unactive round"> <FaSun /> <span claaName="name"> Light </span></div>
-                        <div className="mode active round"> <FaMoon /> <span className="name"> Dark </span></div>
+                    <div className="side_bar-toggle-buttons"> 
+                        <div className="mode unactive"> <FaSun /> <span claaName="name"> Light </span></div>
+                        <div className="mode active"> <FaMoon /> <span className="name"> Dark </span></div>
                     </div>
                 </div>
             </ul>

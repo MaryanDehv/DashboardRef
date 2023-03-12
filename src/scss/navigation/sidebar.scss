@@ -71,15 +71,22 @@
         .side_bar-toggle-buttons{
             display: flex;
             background: $black;
+            border-radius: 60px;
 
             .mode{
                 width: 50%;
-                text-align: center;
                 margin: 5px;
+                cursor: pointer;
+                padding: 4px 0px;
+                border-radius: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
 
-                &:hover , &.active{
+                &.active{
                     background: $lightGrayishBlack;
-
+                    color: $white;
                     svg{
                         color: $white;
                     }
@@ -93,6 +100,13 @@
                         }
                     }
                 }
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            &{
+                border-top: solid 1px $lightGrayishBlack;
+                padding-top: 30px;
             }
         }
     }

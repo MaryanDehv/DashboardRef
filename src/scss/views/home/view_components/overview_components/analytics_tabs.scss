@@ -1,16 +1,19 @@
 .analytics_tabs{
     background: $black;
     display: flex;
+    flex-wrap: wrap;
     padding: 10px;
     gap: 10px;
+    cursor: pointer;
 
     .tab{
-        width:50%;
         height: 100%;
         padding: 20px;
         display: flex;
         flex-wrap: wrap;
         place-content: center;
+        flex-grow: 1;
+        width: 178px;
 
         .icon{
             height:40px;
