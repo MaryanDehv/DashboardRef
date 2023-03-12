@@ -16,10 +16,61 @@
     }
     
     @media only screen and (max-width:590px){
-        &{
+        &.open-mobile{
+            position: fixed;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+
+            .side_bar-logo-container{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+
+                .close{
+                    svg{
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .side_bar-user{
+                background: $lightGrayishBlack;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: 5px;
+                padding: 5px 10px;
+                margin-top: 40px;
+        
+                .details{
+                    display: flex;
+                    gap:10px;
+        
+                    .avatar{
+                        width: 60px;
+                        height: 60px;
+                        background-image:url('https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=786&q=80');
+                        background-size: cover;
+                        border-radius: 100%;
+                    }
+                }
+            }
+
+            .close{
+                display: block;
+            }
+        }
+
+        &.close-mobile{
             display: none;
         }
     }
+
+    .close , .side_bar-user{
+        display: none;
+    }
+
 
     &-container{
         height: calc(100% - 70px);
@@ -30,6 +81,10 @@
 
     &-logo-container{
         height: 70px;
+        
+        svg{
+            color: $white;
+        }
     }
 
     &-item{
@@ -67,6 +122,7 @@
         gap: 20px;
         display: flex;
         flex-direction: column;
+        margin-top: 40px;
         
         .side_bar-toggle-buttons{
             display: flex;
@@ -92,7 +148,7 @@
                     }
                 }
 
-                @media screen and (max-width:768px) {
+                @media screen and (min-width:591px) and (max-width:768px) {
                     &{
                         width: 100%;
                         &.unactive , .name{
@@ -107,6 +163,7 @@
             &{
                 border-top: solid 1px $lightGrayishBlack;
                 padding-top: 30px;
+                padding-bottom: 30px;
             }
         }
     }
@@ -144,7 +201,7 @@
 
 
 
-    @media screen and (max-width:768px) {
+    @media screen and (min-width:591px) and (max-width:768px) {
         &{
             width: 90px;
         }

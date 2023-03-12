@@ -2,13 +2,13 @@ import Dropdown  from "./utils/template/Dropdown";
 import Message from "./utils/dropdown_items/Message";
 import Notification from "./utils/dropdown_items/Notification";
 import Account from "./utils/dropdown_items/Account";
-import { FaBell , FaEquals , FaCommentAlt , FaPlus , FaSearch} from "react-icons/fa";
+import { FaBell , FaBars , FaCommentAlt , FaPlus , FaSearch} from "react-icons/fa";
 
-const Topbar = () => {
+const Topbar = ({toggle}) => {
 
     return (
         <nav className="top_bar">
-            <div className="top_bar-hamburger"> <FaEquals /> </div>
+            <div className="top_bar-hamburger" onClick={() => toggle()}> <FaBars /> </div>
             <div className="top_bar-search-container">
                 <div className="search-icon"> <FaSearch /> </div>
                 <input className="round" type="text" placeholder="search" />

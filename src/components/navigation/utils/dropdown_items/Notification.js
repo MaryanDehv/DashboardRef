@@ -18,7 +18,7 @@ const Notification = () => {
     return (
         notificationObj.map((notif , index) => 
             <li key={index} className="block round">
-                <div className="avatar"><span class="icon"></span></div>
+                <div className="avatar"><span className="icon"></span></div>
                 <div className="details">
                     <div className="user"><p className="name"> {notif.name} <span className="handle"> {notif.handle}</span></p><p className="time">10am</p></div>
                     <p className="message-content"> <span className="action"> {notif.action} </span> <strong>{notif.product}</strong></p>

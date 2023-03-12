@@ -14,13 +14,17 @@
         display: none;
     }
 
-    @media only screen and (max-width:425px){
+    @media only screen and (max-width:590px){
         &-hamburger{
             display: block;
+
+            svg{
+                color: $gray;
+            }
         }
     }
 
-    @media only screen and (max-width:425px){
+    @media only screen and (max-width:590px){
         &-search-container , &-nav-container{
          width: 40% !important;
          text-align: center;
@@ -28,7 +32,7 @@
      }
 
     &-search-container{
-        max-width: 270px;
+        width:400px;
         position: relative;
 
         .search-icon , .shortcut{
@@ -62,7 +66,7 @@
             text-indent: 30px;
         }
 
-        @media only screen and (max-width:425px){
+        @media only screen and (max-width:590px){
             &{
                 width: auto;
             }
@@ -95,7 +99,7 @@
             color: $gray;
         }
 
-        @media only screen and (max-width:425px){
+        @media only screen and (max-width:590px){
             button{
                 display: none;
             }
@@ -115,15 +119,15 @@
         // notification action
         &.top_bar-avatar{
             >div{
-                height: 30px;
-                width: 30px;
+                height: 50px;
+                width: 50px;
                 background-image:url('https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=786&q=80');
                 background-size: cover;
                 background-position: center;
                 border-radius: 100%;
             }
 
-            @media only screen and (max-width:425px){
+            @media only screen and (max-width:590px){
                 &{
                  display: none;
                 }
@@ -149,14 +153,14 @@
                 padding: 20px;
 
                 .avatar{
-                    border-radius: 100%;
-                    width: 50px;
-                    height: 50px;
-                    background: $white;
-                    background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
-                    background-size: cover;
-                    background-position: center;
-                    position: relative;
+                    // border-radius: 100%;
+                    // width: 50px;
+                    // height: 50px;
+                    // background: $white;
+                    // background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+                    // background-size: cover;
+                    // background-position: center;
+                    // position: relative;
 
                     .icon{
                         position: absolute;
