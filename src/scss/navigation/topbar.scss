@@ -108,6 +108,7 @@
 
     &-icon{
         position: relative;
+        cursor: pointer;
         
         // account underlines
         .underline{
@@ -145,7 +146,7 @@
             background:$black;
             border: solid 1px $lightGrayishBlack;
             padding: 20px;
-            top: 80px;
+            top: 60px;
             right:0;
 
             .block{
@@ -199,9 +200,12 @@
             }
         }
 
-        &-dropdown[data-hidden="true"]{
+        &-dropdown{
             display: none;
         }
         
+        &-dropdown[active]{
+            display: block;
+        }
     }
 }

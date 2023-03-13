@@ -44,14 +44,11 @@ const navList = [
 const Sidebar = ({toggle}) => {
     const [darkMode , setDarkMode] = useState(true);
 
-    const darkModeToggle = () => {
-        const buttons = document.querySelectorAll('.mode');
-        buttons.forEach(button => button.addEventListener('click' , (e) => {
-            setDarkMode(e.currentTarget.textContent.includes('Dark'))
-        }))
+    const toggleTheme = (e) => {
+        e.currentTarget.textContent.toLowerCase().includes('dark') 
+        ? setDarkMode(true)
+        : setDarkMode(false)
     }
-
-    darkModeToggle();
 
     return (
         <>
@@ -78,8 +75,8 @@ const Sidebar = ({toggle}) => {
                 <div className="side_bar-toggle-container">
                     <div className="side_bar-help-getting-started"> <span> <FaQuestionCircle /> </span> <p> Help getting started  </p><span className="notice"> 8 </span> </div>
                     <div className="side_bar-toggle-buttons"> 
-                        <div className={`mode ${darkMode ? '' : 'active'}`}> <FaSun /> <span className="name"> Light </span></div>
-                        <div className={`mode ${darkMode ? 'active' : ''}`}> <FaMoon /> <span className="name"> Dark </span></div>
+                        <div className={`mode ${darkMode ? '' : 'active'}`} onClick={toggleTheme}> <FaSun /> <span className="name"> Light </span></div>
+                        <div className={`mode ${darkMode ? 'active' : ''}`} onClick={toggleTheme}> <FaMoon /> <span className="name"> Dark </span></div>
                     </div>
                 </div>
             </ul>

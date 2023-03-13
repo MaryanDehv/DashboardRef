@@ -301,7 +301,7 @@ button.full {
   display: flex;
   gap: 10px;
 }
-.analytics_tabs .tab.active {
+.analytics_tabs .tab[active] {
   background: #272b30;
 }
 .analytics_tabs .tab .data > div {
@@ -897,6 +897,7 @@ button.full {
 }
 .top_bar-icon {
   position: relative;
+  cursor: pointer;
 }
 .top_bar-icon .underline {
   border-bottom: solid 1px #272b30;
@@ -924,7 +925,7 @@ button.full {
   background: #111315;
   border: solid 1px #272b30;
   padding: 20px;
-  top: 80px;
+  top: 60px;
   right: 0;
 }
 .top_bar-icon-dropdown .block {
@@ -969,8 +970,11 @@ button.full {
 .top_bar-icon-dropdown .block:hover {
   background: #272b30;
 }
-.top_bar-icon-dropdown[data-hidden=true] {
+.top_bar-icon-dropdown {
   display: none;
+}
+.top_bar-icon-dropdown[active] {
+  display: block;
 }
 
 * {

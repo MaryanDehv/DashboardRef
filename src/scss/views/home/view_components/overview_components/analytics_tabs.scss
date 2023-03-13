@@ -34,7 +34,7 @@
             gap:10px;
         }
         
-        &.active{
+        &[active]{
             background: $lightGrayishBlack;
         }
 

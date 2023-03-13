@@ -1,10 +1,11 @@
 import {FaShoppingBag , FaWaveSquare , FaAngleUp , FaAngleDown , FaInfoCircle} from "react-icons/fa";
+import {Toggler as toggler} from "../../../../functions/Toggler";
 
 const AnalyticsTabs = () => {
     return(
         <div className="analytics_tabs round">
 
-            <div className="tab customers active round">
+            <div className="tab customers round" onClick={(e) => toggler(e , '.tab')} active>
                 <div className="tab-inner">
                     <div className="icon">
                         <FaShoppingBag />
@@ -17,7 +18,7 @@ const AnalyticsTabs = () => {
                 </div>
             </div>
 
-            <div className="tab income round">
+            <div className="tab income round" onClick={(e) => toggler(e , '.tab')}>
                 <div className="tab-inner">
                     <div className="icon">
                         <FaWaveSquare />
