@@ -7,36 +7,42 @@ const navList = [
         name: "Home",
         icon: FaHome,
         link: "#",
+        path:"/",
         subCategories: false
     } ,
     {
         name: "Products",
         icon: FaShapes,
         link: "#",
+        path:"/products",
         subCategories: ["Dashboard" , "Drafts" , "Released" , "Comments" , "Scheduled"]
     } ,
     {
         name: "Customers",
         icon: FaUser,
         link: "#",
+        path:"/customers",
         subCategories: false
     } ,
     {
         name: "Shop",
         icon: FaHotel,
         link: "#",
+        path:"/shop",
         subCategories: false
     } ,
     {
         name: "Income",
         icon: FaChartPie,
         link: "#",
+        path:"/income",
         subCategories: ["Earning" , "Refunds" , "Payouts" , "Statements"]
     } ,
     {
         name: "Promote",
         icon: FaBahai,
         link: "#",
+        path:"/promote",
         subCategories: false
     } ,
 ]
@@ -59,7 +65,7 @@ const Sidebar = ({toggle}) => {
             <ul className="side_bar-container nav">
                 <div>
                     {
-                        navList.map((list , index) => <SideBarItems key={index} name={list.name} icon={list.icon} dropdown={list.subCategories} />)
+                        navList.map((list , index) => <SideBarItems path={list.path} key={index} name={list.name} icon={list.icon} dropdown={list.subCategories} />)
                     }
                 </div>
                 <div className="side_bar-user">

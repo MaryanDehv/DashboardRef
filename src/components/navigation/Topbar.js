@@ -6,6 +6,7 @@ import { FaBell , FaBars , FaCommentAlt , FaPlus , FaSearch} from "react-icons/f
 import {Toggler as toggler} from "../functions/Toggler";
 
 const Topbar = ({toggle}) => {
+    
 
     return (
         <nav className="top_bar">
@@ -31,7 +32,7 @@ const Topbar = ({toggle}) => {
                     <ul className="top_bar-icon-dropdown round">
                         <h3> Notification </h3>
                         <Dropdown component={Notification} />
-                        <button className="blue-btn white-txt full mt-20 round"> See all notifications </button>
+                        <a className="button blue-btn white-txt full mt-20 round" href="/notifications"> See all notifications </a>
                     </ul>
                 </div>
 

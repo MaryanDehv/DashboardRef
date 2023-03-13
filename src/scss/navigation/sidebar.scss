@@ -11,6 +11,11 @@
         color: $gray;
     }
 
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+
     &::-webkit-scrollbar {
         display: none;
     }

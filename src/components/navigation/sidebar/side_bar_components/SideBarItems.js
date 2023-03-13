@@ -3,7 +3,7 @@ import { useState } from "react";
 
     
 
-const SideBarItems = ({name , icon: Icon , dropdown}) => {
+const SideBarItems = ({name , icon: Icon , dropdown , path}) => {
     const [listDropDown , setListDropDown] = useState();
 
     const toggleDropDown = () => {
@@ -13,10 +13,12 @@ const SideBarItems = ({name , icon: Icon , dropdown}) => {
     return( 
         <li className={`side_bar-item ${dropdown ? 'has-sub' : ''} round`}>
             <div className="item-container" onClick={() => toggleDropDown()}>
-                <div className="parent">
-                    <span className="side_bar-icon"> <Icon /> </span> 
-                    <span className="side_bar-name"> {name} </span>
-                </div>
+                <a href={path}>
+                    <div className="parent">
+                        <span className="side_bar-icon"> <Icon /> </span> 
+                        <span className="side_bar-name"> {name} </span>
+                    </div>
+                </a>
                 {dropdown ? <span className="arrow">  {listDropDown ? <FaAngleDown /> : <FaAngleUp /> }</span>  : ''}
             </div>
             {dropdown ? 

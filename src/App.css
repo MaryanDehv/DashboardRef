@@ -1,24 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Ubuntu:wght@300;400&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
-button {
+button, .button {
+  display: inline-flex;
+  justify-content: center;
   border: 0;
   padding: 10px 20px;
   text-align: center;
   cursor: pointer;
 }
-button.blue-btn {
+button.blue-btn, .button.blue-btn {
   background: #2a85ff;
 }
-button.white-txt {
+button.white-txt, .button.white-txt {
   color: #fcfcfc;
 }
-button.outline-dark {
+button.outline-dark, .button.outline-dark {
   border: 2px solid #272b30;
   background: transparent;
   color: #fcfcfc;
 }
-button.full {
+button.full, .button.full {
   width: 100%;
 }
 
@@ -639,6 +641,10 @@ button.full {
 }
 .side_bar svg {
   color: #747a81;
+}
+.side_bar a {
+  color: inherit;
+  text-decoration: none;
 }
 .side_bar::-webkit-scrollbar {
   display: none;
