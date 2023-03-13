@@ -7,7 +7,7 @@ const navList = [
         name: "Home",
         icon: FaHome,
         link: "#",
-        path:"/",
+        path:"/DashboardRef",
         subCategories: false
     } ,
     {

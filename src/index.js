@@ -8,7 +8,7 @@ import App from './App';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/DashboardRef",
     element: <App component={Home}/>,
     errorElement: <ErrorPage />
   } ,
