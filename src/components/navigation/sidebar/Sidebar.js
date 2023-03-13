@@ -7,7 +7,7 @@ const navList = [
         name: "Home",
         icon: FaHome,
         link: "#",
-        path:"/DashboardRef",
+        path:process.env.PUBLIC_URL,
         subCategories: false
     } ,
     {

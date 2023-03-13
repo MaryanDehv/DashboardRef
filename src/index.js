@@ -8,7 +8,7 @@ import App from './App';
 
 const router = createBrowserRouter([
   {
-    path: "/DashboardRef",
+    path: process.env.PUBLIC_URL,
     element: <App component={Home}/>,
     errorElement: <ErrorPage />
   } ,
@@ -18,6 +18,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />
   }
 ]);
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
