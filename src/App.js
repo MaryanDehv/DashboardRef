@@ -2,8 +2,9 @@ import './App.css';
 import Sidebar from './Components/navigation/sidebar/Sidebar';
 import Topbar from './Components/navigation/Topbar';
 import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 
-function App({component: Component}) {
+function App() {
   const [closeState , setCloseState] = useState(true)
 
   const toggleSideBar = () => {
@@ -18,7 +19,7 @@ function App({component: Component}) {
         <div className="main_view">
             <Topbar toggle={toggleSideBar}/>
             <div className="main_view-inner">
-              <Component />
+              <Outlet />
             </div>
         </div>
       </div>

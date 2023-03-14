@@ -32,7 +32,7 @@ const Topbar = ({toggle}) => {
                     <ul className="top_bar-icon-dropdown round">
                         <h3> Notification </h3>
                         <Dropdown component={Notification} />
-                        <a className="button blue-btn white-txt full mt-20 round" href="/notifications"> See all notifications </a>
+                        <a className="button blue-btn white-txt full mt-20 round" href={process.env.PUBLIC_URL + "/notifications"}> See all notifications </a>
                     </ul>
                 </div>
 

@@ -9,16 +9,22 @@ import App from './App';
 const router = createBrowserRouter([
   {
     path: process.env.PUBLIC_URL,
-    element: <App component={Home}/>,
-    errorElement: <ErrorPage />
-  } ,
-  {
-    path: "/notifications",
-    element: <App component={Notifications}/>,
-    errorElement: <ErrorPage />
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: process.env.PUBLIC_URL,
+        element: <Home />
+      } , 
+      {
+        path: process.env.PUBLIC_URL + "/notifications",
+        element: <Notifications />
+      }
+    ]
   }
 ]);
 
+console.log(process.env.PUBLIC_URL)
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
