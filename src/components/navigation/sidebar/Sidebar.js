@@ -14,7 +14,7 @@ const navList = [
         name: "Products",
         icon: FaShapes,
         link: "#",
-        path:"/products",
+        path:process.env.PUBLIC_URL+"/products",
         subCategories: ["Dashboard" , "Drafts" , "Released" , "Comments" , "Scheduled"]
     } ,
     {
